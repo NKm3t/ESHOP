@@ -1,0 +1,249 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    position: fixed;
+    background: rgb(112, 55, 14);
+    height: 3rem;
+    width: 100%;
+}
+
+.logo{
+    color: white;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    padding: 0 2rem;
+}
+
+nav ul{
+    float: right;
+    margin-right: 2rem;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 3rem;
+    margin: 0 0.4rem;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+}
+
+nav ul li ul li{
+    display: inline-block;
+    line-height: 3rem;
+    margin: 0 0.4rem;
+}
+
+a:hover{
+    background-color: rgb(140, 76, 30);
+    transition: 0.5s;
+}
+
+.main-page a:hover{
+    background-color: rgb(112, 55, 14);
+}
+
+.checkbtn { 
+    position: relative;
+    top: 50%;
+    color: white;
+    float: right;
+    margin-right: 1.5rem; 
+    cursor: pointer;
+    display: none;
+    transform: translate(-50%, -50%);
+} 
+
+#check{
+    display: none;
+}
+
+footer{
+    position: fixed;
+    bottom: 0rem;
+    margin-top: 2.5rem;
+    width: 100%;
+    background-color: rgb(112, 55, 14);
+}
+
+.main-footer{
+    display: flex;
+}
+
+.main-footer .box{
+    flex-basis: 50%;
+    padding: 10px 60px;
+}
+
+.box h2{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content{
+    margin: 10px 0px 0px 0px;
+    position: relative;
+}
+
+.box .content::before{
+    position: absolute;
+    content: ' ';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: red;
+}
+
+.box .content .after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: red;
+    top: -10px;
+}
+
+.right .content .social{
+    margin: 0px 0px 10px 0px;
+}
+
+.right .content .social a{
+    padding: 0px 2px;
+}
+
+.right .content .social a span{
+    height: 40px;
+    width: 40px;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.right .content .social a .fa-facebook:hover{
+    background-color: blue;
+}
+
+.right .content .social a .fa-instagram:hover{
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), 
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), 
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), 
+    radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), 
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), 
+    radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), 
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), 
+    linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+.center .content .fa{
+    font-size: 1.4375rem;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.center .content .text{
+    font-size: 1.0825rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content .phone{
+    margin: 10px 0px;
+}
+
+
+@media (max-width: 952px) {
+    label.logo{
+        font-size: 1.3rem;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 0.7rem;
+    }
+
+
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+
+    .main-footer{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .main-footer .box{
+        margin: 5px 0px;
+    }
+
+}
+
+@media (max-width: 700px){
+    .checkbtn {
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(140, 76, 30);
+        left: -100%;
+        text-align: center;
+        transition: left .5s;
+    }
+
+    nav ul li{
+        display: block;
+    }
+
+    nav ul li a{
+        font-size: 0.7rem;
+    }
+
+    a:hover {
+        background: none;
+        background-color: rgb(112, 55, 14);
+        /*color: rgb(112, 55, 14);*/
+        font: bold;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+
+    .main-footer{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .main-footer .box{
+        margin: 5px 0px;
+    }
+}   

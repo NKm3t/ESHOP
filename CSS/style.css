@@ -10,7 +10,7 @@ body{
 }
 
 nav{
-    position: relative;
+    position: fixed;
     background: rgb(112, 55, 14);
     height: 3rem;
     width: 100%;
@@ -53,6 +53,10 @@ a:hover{
     transition: 0.5s;
 }
 
+.main-page a:hover{
+    background-color: rgb(112, 55, 14);
+}
+
 .checkbtn { 
     position: relative;
     top: 50%;
@@ -69,29 +73,83 @@ a:hover{
 }
 
 
-.content-col{
-    width: 40%;
-}
-
-.content-img{
-    width: 60%;
-}
-
-
-
-.category .img-category{
+.container{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    left: -100px;
+    width: calc(100% - 10px);
+    padding-bottom: 10rem;
+    
 }
 
-.img-category img{
+.card{
+    height: 250px;
     width: 250px;
-    margin: 10px;
+    margin: 0px 20px;
+    margin-top: 90px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flexbox;
+    transition: 0.4s;
+}
+
+.card:hover {
+    height: 300px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .picture{
+    display: block;
+    height: 200px;
+    width: 100%;
+}
+
+.card .picture img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .top-text{
+    padding: 5px;
+}
+
+.card .top-text .name{
+font-size: 20px;
+font-weight: 400;
+color: black;
+
+}
+
+.card .bottom{
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.1s;
+    margin-top: 20px;
+}
+
+.card:hover .bottom{
+    opacity: 1;
+    visibility: visible;
+}
+
+.card .bottom .btn{
+    margin: 10px 0px;
+}
+
+.card .bottom .btn a{
+    text-decoration: none;
+    color: black;
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.9rem;
 }
 
 footer{
-    position: fixed;
+    position: relative;
     bottom: 0rem;
+    margin-top: 2.5rem;
     width: 100%;
     background-color: rgb(112, 55, 14);
 }
@@ -211,6 +269,11 @@ footer{
     .main-footer .box{
         margin: 5px 0px;
     }
+
+    .container{
+        flex-wrap: wrap;
+    }
+
 }
 
 @media (max-width: 700px){
@@ -247,5 +310,22 @@ footer{
         left: 0;
     }
 
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+
+    .main-footer{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .main-footer .box{
+        margin: 5px 0px;
+    }
+
+    .container{
+        flex-wrap: wrap;
+    }
 
 }   
