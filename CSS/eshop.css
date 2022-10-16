@@ -10,37 +10,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.body1{
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container{
-    position: relative;
-    max-width: 430px;
-    width: 100%;
-    background: #d9317a;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.container .text{
-    padding: 30px;
-}
-
-.container .text .title{
-    position: relative;
-    font-size: 27px;
-    font-weight: 600;
-}
-
-.text img{
-    width: 100px;
-}
-
-
 footer{
     position: fixed;
     bottom: 0rem;
