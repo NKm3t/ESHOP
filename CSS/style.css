@@ -28,7 +28,6 @@ body{
     margin-top: 90px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
-    display: flexbox;
     transition: 0.4s;
 }
 
