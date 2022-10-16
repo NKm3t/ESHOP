@@ -16,13 +16,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     z-index: 0;
 }
 
 .forms{
     padding: 30px;
     width: 480px;
+    border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -80,6 +80,26 @@ body{
 
 .input-field-container:first-child {
     padding-bottom: 1rem;
+}
+
+.forms .button {
+    margin-top: 15px;
+    margin-left: 140px;
+    width: 200px;
+}
+
+.forms .button input {
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: rgb(112, 55, 14);
+    cursor: pointer;
+}
+
+.forms .login-signup{
+    margin-top: 15px;
+    text-align: center;
 }
 
 
