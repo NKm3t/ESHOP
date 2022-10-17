@@ -24,24 +24,19 @@ body{
     width: 480px;
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    z-index: -1;
+}
+
+.forms form {
+    padding-top: 3rem;
 }
 
 .forms .title{
-    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translate( -50%);
     font-size: 27px;
     font-weight: 600;
-}
-
-.forms .title::before{
-    content: '';
-    position: relative;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    background-color: rgb(112, 55, 14);
-    border-radius: 25px;
+    color: rgb(112, 55, 14);
 }
 
 .forms .input-field{
@@ -104,103 +99,7 @@ body{
 }
 
 
-footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(112, 55, 14);
-}
 
-.main-footer{
-    display: flex;
-}
-
-.main-footer .box{
-    flex-basis: 50%;
-    padding: 10px 60px;
-}
-
-.box h2{
-    font-size: 1.125rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.box .content{
-    margin: 10px 0px 0px 0px;
-    position: relative;
-}
-
-.box .content::before{
-    position: absolute;
-    content: ' ';
-    top: -10px;
-    height: 2px;
-    width: 100%;
-    background: red;
-}
-
-.box .content .after{
-    position: absolute;
-    content: '';
-    height: 2px;
-    width: 15%;
-    background: red;
-    top: -10px;
-}
-
-.right .content .social{
-    margin: 0px 0px 10px 0px;
-}
-
-.right .content .social a{
-    padding: 0px 2px;
-}
-
-.right .content .social a span{
-    height: 40px;
-    width: 40px;
-    color: white;
-    line-height: 40px;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.right .content .social a .fa-facebook:hover{
-    background-color: blue;
-}
-
-.right .content .social a .fa-instagram:hover{
-    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), 
-    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), 
-    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), 
-    radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), 
-    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), 
-    radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), 
-    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), 
-    linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-}
-
-.center .content .fa{
-    font-size: 1.4375rem;
-    height: 45px;
-    width: 45px;
-    line-height: 45px;
-    text-align: center;
-    border-radius: 50%;
-}
-
-.center .content .text{
-    font-size: 1.0825rem;
-    font-weight: 500;
-    padding-left: 10px;
-}
-
-.center .content .phone{
-    margin: 10px 0px;
-}
 
 
 @media (max-width: 952px) {
@@ -210,19 +109,6 @@ footer{
     }
     nav ul li a{
         font-size: 0.7rem;
-    }
-
-    .main-footer{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    .main-footer .box{
-        margin: 5px 0px;
-    }
-
-    footer {
-        position: relative;
     }
 
 }
@@ -259,19 +145,5 @@ footer{
 
     #check:checked ~ ul{
         left: 0;
-    }
-
-    .main-footer{
-        flex-wrap: wrap;
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .box {
-        padding: 2rem!important;
-    }
-
-    footer {
-        position: relative;
     }
 }   
