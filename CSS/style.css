@@ -106,10 +106,15 @@ footer{
     padding: 10px 60px;
 }
 
+.text{
+    color: white;
+}
+
 .box h2{
     font-size: 1.125rem;
     font-weight: 600;
     text-transform: uppercase;
+    color: white;
 }
 
 .box .content{
