@@ -76,12 +76,16 @@ body{
     }
 
     .body1 {
+        height: auto;
         padding: 2rem;
     }
 
     .container .card {
         flex-direction: column;
     }
+
+
+
 
 }
 

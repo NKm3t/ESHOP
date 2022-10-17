@@ -99,7 +99,10 @@ body{
 }
 
 
-
+.text-login a{
+    color: blue;
+    text-decoration: underline;
+}
 
 
 @media (max-width: 952px) {
